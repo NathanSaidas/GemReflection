@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{203CD4AD-012F-4A26-8E08-8E84DFEF529D}</ProjectGuid>
+    <RootNamespace>GemReflection</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Array.h" />
+    <ClInclude Include="..\..\Source\Attribute.h" />
+    <ClInclude Include="..\..\Source\AttributeBinder.h" />
+    <ClInclude Include="..\..\Source\BasicTypes.h" />
+    <ClInclude Include="..\..\Source\BoolAttribute.h" />
+    <ClInclude Include="..\..\Source\Engine.h" />
+    <ClInclude Include="..\..\Source\Enum.h" />
+    <ClInclude Include="..\..\Source\FloatAttribute.h" />
+    <ClInclude Include="..\..\Source\Func.h" />
+    <ClInclude Include="..\..\Source\FunctionAttribute.h" />
+    <ClInclude Include="..\..\Source\GemAPI.h" />
+    <ClInclude Include="..\..\Source\IntAttribute.h" />
+    <ClInclude Include="..\..\Source\Member.h" />
+    <ClInclude Include="..\..\Source\MemberAttribute.h" />
+    <ClInclude Include="..\..\Source\MemberFlags.h" />
+    <ClInclude Include="..\..\Source\MemberInfo.h" />
+    <ClInclude Include="..\..\Source\MetaObject.h" />
+    <ClInclude Include="..\..\Source\MetaObjectLinker.h" />
+    <ClInclude Include="..\..\Source\Method.h" />
+    <ClInclude Include="..\..\Source\MethodInfo.h" />
+    <ClInclude Include="..\..\Source\Reflection.h" />
+    <ClInclude Include="..\..\Source\Runtime.h" />
+    <ClInclude Include="..\..\Source\StringAttribute.h" />
+    <ClInclude Include="..\..\Source\Type.h" />
+    <ClInclude Include="..\..\Source\TypeTrait.h" />
+    <ClInclude Include="..\..\Source\ValueTypes.h" />
+    <ClInclude Include="Examples.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\BasicTypes.cpp" />
+    <ClCompile Include="..\..\Source\Enum.cpp" />
+    <ClCompile Include="..\..\Source\MemberInfo.cpp" />
+    <ClCompile Include="..\..\Source\MetaObjectLinker.cpp" />
+    <ClCompile Include="..\..\Source\Runtime.cpp" />
+    <ClCompile Include="..\..\Source\Type.cpp" />
+    <ClCompile Include="Examples.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
